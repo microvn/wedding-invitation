@@ -6,3 +6,7 @@ static/sw.js
 yarn.lock
 .idea
 .env
+src
+gulpfile.js
+package-lock.json
+package.json
