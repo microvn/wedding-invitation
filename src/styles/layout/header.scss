@@ -1,0 +1,191 @@
+.navigation {
+  font: 200 12px/20px "SFD-SemiBold", Georgia, serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 42px;
+  background: #3ae;
+  z-index: 20;
+}
+
+.navigation a {
+  color: #fff;
+}
+
+.mobile .navigation {
+  position: absolute;
+}
+
+.navigation-left, .navigation-left > *, .navigation-right > * {
+  float: left;
+}
+
+.navigation-left {
+  margin-left: 7%;
+}
+
+.navigation-right {
+  float: right;
+  margin-right: 7%;
+}
+
+.navigation-headline:before, .navigation-sections:before, .navigation-shares:before {
+  content: "";
+  float: left;
+  height: 20px;
+  border-right: solid 1px #fff;
+  margin: 9px 15px;
+}
+
+.navigation-logo {
+  float: left;
+  background: url("http://www.hanoimoi.com.vn/Content/hnm/img/logo-hnm.png") center no-repeat;
+  height: 30px;
+  width: 168px;
+  background-size: 90%;
+  margin-top: 6px;
+}
+
+.navigation-headline {
+  float: left;
+  letter-spacing: .1em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.navigation-headline:before {
+  margin-top: 0;
+}
+
+.navigation-sections:before {
+  margin-right: 5px;
+}
+
+.navigation-section {
+  padding: 10px 10px 9px 10px;
+  float: left;
+}
+
+.navigation-section:last-child {
+  padding-right: 0;
+}
+
+.navigation-logo, .navigation-section, .navigation-volume {
+  opacity: 1;
+}
+
+.navigation-logo:hover, .navigation-section:hover, .navigation-section--active, .navigation-volume:hover {
+  opacity: 1;
+}
+
+.navigation-marker {
+  position: absolute;
+  margin-top: -80px;
+}
+
+.navigation-volume, .navigation-share {
+  display: inline-block;
+  padding: 11px 5px;
+}
+
+.navigation-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url(http://graphics8.nytimes.com/newsgraphics/2013/10/27/south-china-sea/d4ddc253fb0e8783d3e57b3c5a189fcd2af63c5b/icons.png);
+}
+
+.navigation-share--twitter .navigation-icon {
+  background-position: -6px -28px;
+}
+
+.navigation-share--twitter:hover .navigation-icon {
+  background-position: -6px -48px;
+}
+
+.navigation-share--facebook .navigation-icon {
+  background-position: -26px -28px;
+}
+
+.navigation-share--facebook:hover .navigation-icon {
+  background-position: -26px -48px;
+}
+
+.navigation-share--email .navigation-icon {
+  background-position: -28px -68px;
+  width: 22px;
+}
+
+.navigation-share--email:hover .navigation-icon {
+  background-position: -5px -68px;
+}
+
+.navigation-volume .navigation-icon {
+  background-position: -52px -68px;
+}
+
+.navigation-volume.navigation-volume--muted .navigation-icon {
+  background-position: -72px -68px;
+}
+
+@media screen and (max-width: 999px) {
+  .navigation-headline {
+    display: none;
+  }
+
+  .mobile .navigation-headline {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .mobile .navigation-shares, .mobile .navigation-volume, .mobile .navigation-headline {
+    display: none;
+  }
+
+  .mobile .navigation {
+    background-color: transparent;
+    position: absolute;
+  }
+
+  .mobile .navigation-logo {
+    background: url("http://hanoimoi.com.vn/megastory/2020/90-nam-dang-bo-ha-noi-170320/img/logo.png") center no-repeat;
+    background-size: contain;
+    display: block;
+    float: left;
+    margin: 10px 0;
+    padding: 0;
+    height: 24px;
+    width: 104px;
+  }
+
+  .mobile .navigation-sections {
+    margin-top: 10px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile .navigation-solid {
+    background-color: #3ae;
+    position: fixed;
+  }
+
+  .mobile .navigation-solid .navigation-headline {
+    display: block;
+  }
+
+  .mobile .navigation-solid .navigation-logo {
+    margin-top: 11px;
+  }
+
+  .mobile .navigation-solid .navigation-sections {
+    margin-top: 0px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile .navigation-headline, .mobile .navigation-right {
+    display: none;
+  }
+}

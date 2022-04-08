@@ -1,0 +1,31 @@
+.footer-section {
+  background: #3ae;
+  margin-top: 0;
+  padding: 7px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-section a {
+  //border-right: 1px solid #ccc;
+  color: #fff;
+  font: 10px sans-serif;
+  margin-right: 7px;
+  padding-right: 7px;
+  text-decoration: none;
+}
+
+.footer-section a:last-child {
+  border-right: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section a:hover {
+  text-dceoration: underline;
+}
+
+.footer-section ~ * {
+  position: absolute;
+  top: -1000px;
+}

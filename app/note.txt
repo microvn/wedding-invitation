@@ -1,0 +1,30 @@
+html chèn ảnh inforgraphics
+
+<div class="magz-img-wrapper w980">
+                    <a href="http://hanoimoi.com.vn/Uploads/files/Thành ĐạtTTXVN.jpg" class="magz-img-zoom">
+                        <img src="http://hanoimoi.com.vn/Uploads/files/Thành ĐạtTTXVN.jpg" alt="">
+                    </a>
+                    <div class="magz-caption">Với nỗ lực cao nhất của các cơ quan chức năng trong nước, các cơ quan đại
+                        diện ngoại giao ở nước ngoài, trên cơ sở nguyện vọng của công dân và năng lực cách ly ở trong
+                        nước, cho đến nay Việt Nam đã tổ chức được hơn 80 chuyến bay, đưa hơn 21.000 công dân Việt Nam
+                        từ hơn 50 quốc gia và vùng lãnh thổ về nước, đảm bảo công tác an toàn phòng, chống dịch
+                        Covid-19.
+                    </div>
+                </div>
+
+
+html chèn video
+
+<div class="magz-video-once-wrapper w980">
+                    <div class="magz-vo-content">
+                        <video preload="auto" controls>
+                            <source src="http://hanoimoi.com.vn/Uploads/files/tuanphong/2020/ATM-gao.mp4"
+                                    type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="magz-caption">
+                        Cộng đồng chung tay, góp sức cùng
+                        nhau
+                        vượt qua khó khăn, với tinh thần “không để ai bị bỏ lại phía sau”.
+                    </div>
+                </div>
