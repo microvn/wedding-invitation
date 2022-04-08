@@ -20,7 +20,7 @@ window.WeddingScript = function () {
                 minute: 0, // 0-59
                 second: 0, // 0-59,
                 timezone: +7,
-                onFinish: function () {
+                onFinish: function onFinish() {
                     $('.text-done').removeClass('hidden');
                 }
 
@@ -36,7 +36,7 @@ window.WeddingScript = function () {
             centeredSlides: true,
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true,
+                clickable: true
             },
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -47,12 +47,12 @@ window.WeddingScript = function () {
         $('.btn-share-fb').on('click', function (e) {
             e.preventDefault();
             _this.shareFB();
-        })
+        });
 
         $('.btn-share-twitter').on('click', function (e) {
             e.preventDefault();
             _this.shareTwitter();
-        })
+        });
     };
 
     _this.initWOW = function () {
@@ -89,35 +89,41 @@ window.WeddingScript = function () {
         return _this.isMobile() && window.innerWidth < 768;
     };
 
-    _this.shareFB = function (w = 700, h = 485) {
-        const link = "https://wedding.microvn.net";
-        const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
-        const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+    _this.shareFB = function () {
+        var w = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 700;
+        var h = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 485;
 
-        const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-        const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        var link = "https://wedding.microvn.net";
+        var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+        var dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
 
-        const systemZoom = width / window.screen.availWidth;
-        const left = (width - w) / 2 / systemZoom + dualScreenLeft
-        const top = (height - h) / 2 / systemZoom + dualScreenTop
-        const newWindow = window.open("https://www.facebook.com/sharer.php?u=" + link, "Share Facebook", `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=700, height=485,width=${w / systemZoom},height=${h / systemZoom},top=${top},left=${left}`)
+        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+        var systemZoom = width / window.screen.availWidth;
+        var left = (width - w) / 2 / systemZoom + dualScreenLeft;
+        var top = (height - h) / 2 / systemZoom + dualScreenTop;
+        var newWindow = window.open("https://www.facebook.com/sharer.php?u=" + link, "Share Facebook", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=700, height=485,width=' + w / systemZoom + ',height=' + h / systemZoom + ',top=' + top + ',left=' + left);
 
         if (window.focus) newWindow.focus();
         return false;
     };
 
-    _this.shareTwitter = function (w = 700, h = 485) {
-        const link = "https://wedding.microvn.net";
-        const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
-        const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+    _this.shareTwitter = function () {
+        var w = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 700;
+        var h = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 485;
 
-        const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-        const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        var link = "https://wedding.microvn.net";
+        var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+        var dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
 
-        const systemZoom = width / window.screen.availWidth;
-        const left = (width - w) / 2 / systemZoom + dualScreenLeft
-        const top = (height - h) / 2 / systemZoom + dualScreenTop
-        const newWindow = window.open("https://twitter.com/intent/tweet?url=" + link, "Share Facebook", `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=700, height=485,width=${w / systemZoom},height=${h / systemZoom},top=${top},left=${left}`)
+        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+        var systemZoom = width / window.screen.availWidth;
+        var left = (width - w) / 2 / systemZoom + dualScreenLeft;
+        var top = (height - h) / 2 / systemZoom + dualScreenTop;
+        var newWindow = window.open("https://twitter.com/intent/tweet?url=" + link, "Share Facebook", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=700, height=485,width=' + w / systemZoom + ',height=' + h / systemZoom + ',top=' + top + ',left=' + left);
 
         if (window.focus) newWindow.focus();
         return false;
